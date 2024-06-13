@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @font-face {
+            font-family: custom_font;
+            src: url(Norse-Bold.otf);
+        }
+
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: lightgray;
+        }
+
+        p{
+            font-family : Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 1.3vw;
+        }
+
+
+        button{
+            width: 30%;
+            height: 6vh;
+            margin-left: 2vw;
+            margin-top: 2vw;
+            border-radius: 5px;
+            border: none;
+            background-color: #596D48;
+            columns: white;
+            font-size: 1.3vw;
+        }
+
+        button:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        input{
+            width:90%;
+        }
+
+        label{
+            font-size: 1.3vw;
+        }
+        .foreground{
+            background-image: url(ilya-pavlov-OqtafYT5kTw-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 40%;
+            height: 100vh;
+            display: flex; 
+            align-items: center;
+        }
+
+        .logo{
+            width:100%;
+            height:20vh;
+            background-color:rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+        }
+
+        #logo_text{
+            font-family:custom_font,'Courier New' ; font-size: 5vw;
+            color: white;
+            align-self: center;
+        }
+        .main{
+            display:flex;
+            flex-direction: column;
+            width: 45%;
+            height: 95vh;
+            margin-top: 5vh;
+            margin-left: 5%;
+            background-color:lightgray;
+            
+        }
+
+        .form{
+
+            background-color: white;
+            display: flex;
+            width: 90%;
+            font-weight: bold;
+            flex-wrap: wrap;
+            border-radius: 20px;
+            z-index: 1;
+            height: 45vh;
+            
+            
+        }
+
+        .field{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:5%;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="foreground">
+        <div class="logo">
+        <img src="odin-lined.png" alt="" >
+        <span id="logo_text">ODIN</span>
+        </div>
+    </div>
+    <div class="main">
+        <p>This is not a real online service you know you need something like this in you life to help you realize you deepest dreams. Signup now to get started. </p>
+        <p style="">you know you want to</p>
+        <p>Let's do this! </p>
+        <form action="#" class="form" method="get">
+
+            <div class="field">
+                <label for="">FIRST NAME</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label for="">LAST NAME</label>
+                <input type="text" name="" >
+            </div>
+
+            <div class="field">
+                <label for="">EMAIL</label>
+                <input type="email" name="" required>
+            </div>
+
+            <div class="field">
+                <label for="">PHONE NUMBER</label>
+                <input type="number" name=""  required>
+            </div>
+
+            <div class="field">
+                <label for="">PASSWORD</label>
+                <input type="password" name="" id="password" required>
+            </div>
+
+            <div class="field">
+                <label for="">CONFIRM &nbsp PASSWORD</label>
+                <input type="password" name="" id="confirm_password" required >
+            </div>
+
+        </form>
+        <button type="submit" onclick="compare()">Create Account</button>
+        <h4 style="margin-left: 2vw;">Already have an account?<span style="color: #596D48;">Log in</span></h4>
+    </div>
+
+    <script>
+
+        function compare(){
+            let password = document.getElementById("password")
+            let confirm_password = document.getElementById("confirm_password")
+            if(!(password.value == confirm_password.value) ){
+                alert("Passwords do not match")
+            }else if(!(password.value) || !(confirm_password.value)){
+                alert("Password cannot be empty")
+            }
+        }
+    </script>
+</body>
+</html>

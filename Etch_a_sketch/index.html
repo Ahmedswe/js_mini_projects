@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(90deg, #00dbde 0%, #0004ff 100%);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons{
+            display: flex;
+            gap: 50px;
+            margin:50px;
+            
+
+
+
+        }
+        #sketch_pad{
+            
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width : 30vw;
+            height : 30vw;
+            
+            
+            
+                    
+        }
+        
+        .cell {
+            border: 1px solid black;
+            background-color: white;
+            box-sizing: border-box; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button id="grid_generator">Generate_grid</button>
+        <button id="black_pen">Black_trail</button>
+        <button id="colorful_pen">Rainbow_trail</button>
+        <button id="clear">clear</button>
+    </div>
+    <div id="sketch_pad">
+
+    </div>
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
